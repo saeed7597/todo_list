@@ -1,0 +1,13 @@
+{
+  "manageTasks": "وظایف خود را مدیریت کنید",
+  "labelDescription" : "با همکار وظایف خود را سازماندهی، برنامه ریزی و همکاری کنید. زندگی پرمشغله شما شایسته این است. می توانید چک لیست و هدف خود را مدیریت کنید.",
+  "labelButtonGetStarted" : "شروع کنید",
+  "labelStart" : "مدیریت کار خود را انجام دهید با",
+  "appName" : "همکار",
+  "labelSignUp" : "ثبت نام",
+  "labelHaveAnAccount" : "از قبل حساب کاربری دارید؟ ",
+  "labelLogIn" : "ورود",
+  "labelHelloAgain" : "سلام مجدد",
+  "labelWelcomeBack" : "خوش اومدی"
+
+}
