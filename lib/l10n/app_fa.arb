@@ -8,6 +8,13 @@
   "labelHaveAnAccount" : "از قبل حساب کاربری دارید؟ ",
   "labelLogIn" : "ورود",
   "labelHelloAgain" : "سلام مجدد",
-  "labelWelcomeBack" : "خوش اومدی"
+  "labelWelcomeBack" : "خوش اومدی!",
+  "hintInputEmail" : "ایمیل خود را وارد کنید",
+  "hintInputPassword" : "رمز عبور",
+  "labelOtherAccount": "یا وارد شو با : ",
+  "labelGoogle" : "گوگل",
+  "labelFacebook" : "فیسبوک",
+  "labelNotMember" : "به یاد نمی آورید؟ ",
+  "labelRegisterNow": "ثبت نام کنید"
 
 }

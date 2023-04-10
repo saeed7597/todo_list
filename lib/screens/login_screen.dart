@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_list/widgets/button_login.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -28,7 +30,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 24,),
               TextField(
                 decoration: InputDecoration(
-                    hintText: 'Enter your email',
+                    hintText: appLanguage.hintInputEmail,
                     contentPadding: const EdgeInsets.all(16),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)
                     )
@@ -37,7 +39,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 24,),
               TextField(
                 decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: appLanguage.hintInputPassword,
                     contentPadding: const EdgeInsets.all(16),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)
                     ),
@@ -64,24 +66,67 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 50,
+                    width: MediaQuery.of(context).size.width * 0.3,
                     height: 1,
                     decoration: const BoxDecoration(
-                        color: Colors.grey
+
+                        gradient: LinearGradient(
+                            begin: Alignment.center,
+                            end: Alignment.centerRight,
+                            colors: [
+                              Colors.white,
+                              Colors.grey
+                            ]
+                        )
                     ),
                   ),
-                  SizedBox(width: 3,),
-                  Text(' Or Continue With'),
-                  SizedBox(width: 3,),
+                  const SizedBox(width: 3,),
+                  Text(appLanguage.labelOtherAccount,style: themeData.textTheme.caption,),
+                  const SizedBox(width: 3,),
                   Container(
-                    width: 50,
+                    width: MediaQuery.of(context).size.width * 0.3,
                     height: 1,
-                    decoration: const BoxDecoration(
-                        color: Colors.grey
+                    decoration:const   BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.center,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.white,
+                              Colors.grey
+                            ]
+                        )
                     ),
                   ),
                 ],
               ),
+              const SizedBox(height: 16,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ButtonLogin(
+                      borderColor: Colors.grey,
+                      background: Colors.white,
+                      nameAccount: appLanguage.labelGoogle,
+                      pathIcon: 'assets/svg/google.svg',
+                      textStyle: themeData.textTheme.bodyText1!.copyWith(color: Colors.grey),
+                  ),
+                  ButtonLogin(
+                      borderColor: const Color(0xff4267B2),
+                      background: const Color(0xff4267B2),
+                      nameAccount: appLanguage.labelFacebook,
+                      pathIcon: 'assets/svg/facebook.svg',
+                      textStyle: themeData.textTheme.bodyText1!.copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 50,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(appLanguage.labelNotMember,style: themeData.textTheme.bodyText1!.copyWith(color:Colors.grey),),
+                  Text(appLanguage.labelRegisterNow,style: themeData.textTheme.bodyText1,),
+                ],
+              )
 
             ],
           ),

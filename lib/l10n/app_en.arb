@@ -8,5 +8,12 @@
   "labelHaveAnAccount" : "Already have an account? ",
   "labelLogIn" : "LOG IN",
   "labelHelloAgain" : "Hello Again!",
-  "labelWelcomeBack" : "Welcome Back"
+  "labelWelcomeBack" : "Welcome Back",
+  "hintInputEmail" : "Enter your email",
+  "hintInputPassword" : "password",
+  "labelOtherAccount": " Or Continue With",
+  "labelGoogle" : "Google",
+  "labelFacebook" : "Facebook",
+  "labelNotMember" : "Not a member? ",
+  "labelRegisterNow": "Register Now "
 }
