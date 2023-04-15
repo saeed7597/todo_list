@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_list/screens/sign_up_screen.dart';
 import 'package:todo_list/widgets/button_login.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool showPassword = false;
   @override
   Widget build(BuildContext context) {
     final appLanguage = AppLocalizations.of(context);
     final themeData = Theme.of(context);
+
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -38,12 +46,20 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24,),
               TextField(
+                obscureText: !showPassword,
                 decoration: InputDecoration(
                     hintText: appLanguage.hintInputPassword,
                     contentPadding: const EdgeInsets.all(16),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)
                     ),
-                    suffixIcon: InkWell(onTap: (){},child: const Icon(Icons.remove_red_eye_outlined,color: Colors.grey,),)
+                    suffixIcon: InkWell(
+                      onTap: (){
+                        setState(() {
+                          showPassword = !showPassword;
+                        });
+                      },
+                      child: Icon(Icons.remove_red_eye_outlined,color: showPassword ? Colors.blue : Colors.grey,),
+                    )
                 ),
               ),
               const SizedBox(height: 40,),
@@ -124,7 +140,12 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(appLanguage.labelNotMember,style: themeData.textTheme.bodyText1!.copyWith(color:Colors.grey),),
-                  Text(appLanguage.labelRegisterNow,style: themeData.textTheme.bodyText1,),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                    },
+                    child: Text(appLanguage.labelRegisterNow,style: themeData.textTheme.bodyText1,),
+                  )
                 ],
               )
 

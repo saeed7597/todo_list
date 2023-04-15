@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const themeMode = ThemeMode.light;
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         localizationsDelegates: const [
           AppLocalizations.delegate,

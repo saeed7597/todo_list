@@ -15,5 +15,15 @@
   "labelGoogle" : "Google",
   "labelFacebook" : "Facebook",
   "labelNotMember" : "Not a member? ",
-  "labelRegisterNow": "Register Now "
+  "labelRegisterNow": "Register Now ",
+  "labelHello" : "Hello!",
+  "labelWelcome" : "welcome to ",
+  "labelSignUpTo" : "sign up to get started.",
+  "hintYourName" : "Your name",
+  "hintYourEmail" : "Your email",
+  "hintPassword" : "password",
+  "labelAlreadyAccount": "Already have an account? ",
+  "labelYouHave" : "You have",
+  "labelTasks" : "tasks ",
+  "labelToday" : "today!"
 }

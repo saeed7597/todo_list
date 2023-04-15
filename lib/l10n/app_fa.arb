@@ -15,6 +15,15 @@
   "labelGoogle" : "گوگل",
   "labelFacebook" : "فیسبوک",
   "labelNotMember" : "به یاد نمی آورید؟ ",
-  "labelRegisterNow": "ثبت نام کنید"
-
+  "labelRegisterNow": "ثبت نام کنید",
+  "labelHello" : "سلام!",
+  "labelWelcome" : "خوش اومدی به ",
+  "labelSignUpTo" : "برای شروع ثبت نام کنید.",
+  "hintYourEmail" : "ایمیل خود را وارد کنید",
+  "hintYourName" : "نام خود را وارد کنید",
+  "hintPassword" : "رمز عبور",
+  "labelAlreadyAccount": "از قبل حساب دارید؟ ",
+  "labelYouHave" : "شما",
+  "labelTasks" : "وظیفه ",
+  "labelToday" : "امروز "
 }

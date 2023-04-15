@@ -38,7 +38,7 @@ class AppThemeConfig {
           ),
           headline6: TextStyle(
             color: secondaryColor
-          )
+          ),
         )
     );
   }
