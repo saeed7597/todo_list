@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:todo_list/screens/home_screen.dart';
 import 'package:todo_list/screens/two_screen.dart';
 class OneScreen extends StatelessWidget {
   const OneScreen({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class OneScreen extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const TwoScreen()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const HomeScreen()));
                           },
                           child: Text(appLanguage!.labelButtonGetStarted)),
                     ),
