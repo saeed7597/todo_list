@@ -41,6 +41,15 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  hive_generator: ^2.0.0
+  equatable: ^2.0.5
+  either_dart: ^0.4.0
+  get_it: ^7.6.0
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +61,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

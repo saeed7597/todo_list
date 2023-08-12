@@ -1,8 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:todo_list/screens/home_screen.dart';
-import 'package:todo_list/screens/login_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../core/services/service_locator.dart';
+import '../features/main/presentation/bloc/get_tasks_bloc.dart';
+import '../features/main/presentation/screens/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -100,7 +103,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Text(appLanguage.labelAlreadyAccount,style: themeData.textTheme.labelMedium!.copyWith(color: Colors.grey),),
                   GestureDetector(
                     onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const LoginScreen()));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context)=>
+                                  BlocProvider(
+                                      create: (context) => sl<GetTasksBloc>(),
+                                      child: const HomeScreen(),
+                                  )
+                          )
+                      );
                     },
                     child: Text(
                       appLanguage.labelLogIn,
